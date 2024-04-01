@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FCC Random Quote Generator</title>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+
+	<body>
+		<div id="quote-box">
+			<div class="quote-text">
+				<i class="fa fa-quote-left"> </i><span id="text"></span>
+			</div>
+			<p id="author">Author Name</p>
+
+			<!-- Buttons for generating a new quote and tweeting it -->
+			<div class="buttons">
+				<div>
+					<a id="tweet-quote" title="Tweet this quote!" target="_top">
+						<i class="fa fa-twitter-square soc-btn"></i>
+					</a>
+					<a
+						id="tumblr-quote"
+						title="Post this quote on tumblr!"
+						target="_blank"
+					>
+						<i class="fa fa-tumblr-square soc-btn"></i>
+					</a>
+				</div>
+				<button id="new-quote" onclick="newQuote()">New Quote</button>
+			</div>
+		</div>
+
+		<h1 class="creator">by TatsuyaLL</h1>
+
+		<!-- Script to generate random quotes from an array of quotes -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="scripts.js"></script>
+
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<h2>Confirmation Message</h2>
+				<span class="line"></span>
+				<h1 class="modal-message">Do you wish to proceed to Twitter?</h1>
+				<div class="modal-buttons">
+					<button class="close">NO</button>
+					<button class="yes">YES</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
